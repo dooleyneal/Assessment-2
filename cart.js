@@ -35,7 +35,7 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((a, c) => a+c.price, 0)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,6 +54,8 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponvalue, tax) => cartTotal*(1 + tax) - couponvalue
+
 
 
 
@@ -79,6 +81,12 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    name - a string of the name on the order.
+    total - a number to represent the total of the customer's bill.
+    email - a string of the customer's email to send the receipt too.
+    phone number - a ten-digit string of digits for the resturant to contact the customer.
+    method - a string to indicate if the customer is getting their food via 'In-store Pickup', 'Curbside Pickup', or 'Delivery' only these values are acceptable.
+
 
 */
 
@@ -88,3 +96,10 @@ const cart = [
 */
 
 //CODE HERE
+let customer = {
+    name: 'John Johnson',
+    total: 44.32,
+    email: 'johnsonj@devmountain.com',
+    phoneNumber: '5555551234',
+    method: 'Delivery'
+}
